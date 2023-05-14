@@ -24,35 +24,42 @@ class FacebookApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(199, 47, 175, 147),
-        shadowColor: Color.fromARGB(210, 255, 251, 251),
-        title: Text(
-          "RetPlan",
-          style: TextStyle(color: Color.fromARGB(206, 255, 255, 255)),
-        ),
-        centerTitle: true,
-        leading: IconButton(
-          iconSize: 30,
-          icon: Icon(Icons.menu),
-          onPressed: () {},
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.receipt),
-            iconSize: 30,
+        appBar: AppBar(
+          backgroundColor: Color.fromARGB(199, 47, 175, 147),
+          elevation: 10,
+          // shadowColor: Color.fromARGB(210, 117, 140, 131),
+          title: Text(
+            "RetPlan",
+            style: TextStyle(
+                color: Color.fromARGB(206, 255, 255, 255),
+                fontWeight: FontWeight.bold,
+                fontSize: 23),
           ),
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.search),
+          centerTitle: true,
+          leading: IconButton(
             iconSize: 30,
-          )
-        ],
-      ),
-      backgroundColor: Color.fromARGB(255, 220, 255, 244),
-      //backgroundColor: Color.fromARGB(255, 70, 207, 180),
-      // body: ,
-    );
+            icon: Icon(Icons.menu),
+            onPressed: () {},
+          ),
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.receipt),
+              iconSize: 30,
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.search),
+              iconSize: 30,
+            )
+          ],
+        ),
+        backgroundColor: Color.fromARGB(255, 220, 255, 244),
+        body: BottomAppBar(
+          child: IconButton(
+            icon: Icon(Icons.playlist_add_circle_outlined),
+            onPressed: () {},
+          ),
+        ));
   }
 }
